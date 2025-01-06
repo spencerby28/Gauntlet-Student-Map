@@ -101,15 +101,21 @@ export const actions: Actions = {
 
   oauth: async (event) => {
     const { account } = createAdminClient();
-    console.log(event.url.origin);
+    const origin = event.url.origin;
+    console.log('OAuth Request Origin:', origin);
 
-    const redirectUrl = await account.createOAuth2Token(
-      OAuthProvider.Discord,
-      `${event.url.origin}/oauth`,
-      `${event.url.origin}/`
-    );
-    console.log(redirectUrl);
+    try {
+      const redirectUrl = await account.createOAuth2Token(
+        OAuthProvider.Discord,
+        `${origin}/oauth`,
+        `${origin}/`
+      );
+      console.log('Generated Redirect URL:', redirectUrl);
 
-    throw redirect(302, redirectUrl);
+      throw redirect(302, redirectUrl);
+    } catch (error) {
+      console.error('OAuth Error:', error);
+      throw error;
+    }
   }
 };
