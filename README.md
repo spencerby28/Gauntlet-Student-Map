@@ -1,38 +1,49 @@
-# sv
+# Guantlet-Students
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Tracking where everyone's coming from before we all end up in Austin. Built with SvelteKit + Appwrite.
 
-## Creating a project
+Live at [gauntlet.sb28.xyz](https://gauntlet.sb28.xyz). Login with Discord.
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Run it locally
 
 ```bash
-npm run dev
+# Get the code
+git clone <repo-url> && cd gauntlet
+pnpm install
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# Set up your env
+cp .env.example .env
+# Fill in your Appwrite and Discord creds
+
+# Fire it up
+pnpm dev
 ```
+## Stack
 
-## Building
+- SvelteKit for the frontend magic
+- Appwrite handling the backend heavy lifting
+- D3 making things pretty on maps
 
-To create a production version of your app:
+## Features
 
-```bash
-npm run build
-```
+✅ Done:
+- US map with migration paths
+- Discord auth
+- Current location + hometown tracking
+- Real-time updates
+- Countdown to ATX
+- City autocomplete
 
-You can preview the production build with `npm run preview`.
+🚧 Coming up:
+- Globe view
+- Stats dashboard
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Contributing
+
+1. Branch off main
+2. Do your thing
+3. PR it
+4. Auto-deploys to Vercel for preview
+5. Gets merged, ships to prod
+
+That's it. Let's build.
