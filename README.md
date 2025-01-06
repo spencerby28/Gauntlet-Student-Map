@@ -1,4 +1,4 @@
-# Guantlet-Students
+# Guantlet Student Map
 
 Tracking where everyone's coming from before we all end up in Austin. Built with SvelteKit + Appwrite.
 
