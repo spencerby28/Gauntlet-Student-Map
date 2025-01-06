@@ -8,15 +8,14 @@ Live at [gauntlet.sb28.xyz](https://gauntlet.sb28.xyz). Login with Discord.
 
 ```bash
 # Get the code
-git clone <repo-url> && cd gauntlet
-pnpm install
+git clone [<repo-url>](https://github.com/spencerby28/Gauntlet-Student-Map) && cd gauntlet
+npm install
 
 # Set up your env
 cp .env.example .env
-# Fill in your Appwrite and Discord creds
 
 # Fire it up
-pnpm dev
+npm dev
 ```
 ## Stack
 
@@ -35,6 +34,7 @@ pnpm dev
 - City autocomplete
 
 🚧 Coming up:
+- Restrict Access to Discord Users in Unofficial Discord
 - Globe view
 - Stats dashboard
 
