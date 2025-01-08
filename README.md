@@ -8,7 +8,7 @@ Live at [gauntlet.sb28.xyz](https://gauntlet.sb28.xyz). Login with Discord.
 
 ```bash
 # Get the code
-git clone [<repo-url>](https://github.com/spencerby28/Gauntlet-Student-Map) && cd gauntlet
+git clone https://github.com/spencerby28/Gauntlet-Student-Map && cd gauntlet
 npm install
 
 # Set up your env
